@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Formular accident rutier</title>
+
+    </head>
+    
+    <body>
+      
+            <form action="#">
+            <table >
+                <thead>
+                    <tr> 
+                        <th colspan="1"> 
+                            Formular accident rutier
+                            <br>
+                            Toate c&#226;mpurile sunt obligatorii
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>
+                            <fieldset id="detaliiAccident">
+                                <legend>Detalii accident</legend>
+                                    Data accidentului:&nbsp;&nbsp;&nbsp;<input type="text" maxlength="50">
+                                    <label for="tip">Tipul autoturismului:</label>
+                                    <select name="tip" id="tip">
+                                        <option value="none" selected="selected">-------</option>
+                                        <option value="Supermini">Supermini</option>
+                                        <option value="Hatchback">Hatchback</option>
+                                        <option value="Coupe">Coupe</option>
+                                        <option value="Crossover">Crossover</option>
+                                        <option value="Cabriolet">Cabriolet</option>
+                                        <option value="Berlina">Salon (Berlina)</option>
+                                        <option value="Estate">Estate</option>
+                                        <option value="MPV">MPV</option>
+                                    </select>
+                                <br>
+                                    Locul accidentului:&nbsp;<input type="text" maxlength="50">
+                                    Desen: <input type="file" name="desenAccident" id="hitDraw" multiple>      
+                                <br>
+                                    Pagubitul:<input type="radio" name="perstpective">
+                                    P&#259;&#355;itul:<input type="radio" name="perstpective">             
+                            </fieldset>
+                        </td>
+                
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend>Detalii personale</legend>
+                                <table > 
+                                    <tr>
+                                        <td > Nume<input type="text" maxlength="50"></td>
+                                        <td rowspan="2">
+                                            
+                                            CNP: <input type="text" maxlength="14" size="32">
+                                            <br>
+                                            Serie: <input type="text" size="3" maxlength="2">   
+                                            Nr.: <input type="text" size="3" maxlength="5">
+                                            V&#226;rst&#259;: <input type="number" min="18" max="66" step="1">
+                                            
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Prenume: <input type="text" maxlength="50"></td>
+                                
+                                    </tr>
+
+                                    <tr>
+                                        <td  >
+                                            Mail: <input type="text" name="mail" id="mail" maxlength="10" size="20">
+                                        </td>
+                                        <td>
+                                            Telefon: <input type="text" name="tel" id="tel" maxlength="10" size="13">
+                                            Sex:
+                                            <input type="radio" name="sex" id="sexM">M
+                                            <input type="radio" name="sex" id="sexF">F 
+                                        </td>
+                                        
+                                    </tr>
+                                    
+                                </table>
+
+                            </fieldset> 
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <fieldset> 
+                                <legend>Datele ma&#351;inii</legend>
+                                <table>
+                                        <tr>
+                                        
+                                            <td rowspan="3" >
+                                                Serie &#351;asiu: <input type="text" name="serielCar" id="serieCar">
+                                                <br>
+                                                Cod culoare: <input type="text" name="paintCar" id="paintCar">
+                                                <br>
+                                                Nr. &#238;nmatriculare: <input type="text" name="idCar" id="idCar" maxlength="7">
+                                            </td>
+                                      
+                                            <td colspan="3" >
+                                                <label for="spate"> Spate</label><br>
+                                                <input type="checkbox" name="hit" id="spate" >
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td >
+                                                <label for="lateralSt">Stanga</label>
+                                                <input type="checkbox" name="hit" id="lateralSt" >
+                                            </td>
+                                            
+                                            <td >
+                                                <img src="car.jpg" alt="Masina" width="150" height="100">
+                                            </td>
+                                            
+                                            <td>
+                                                <input type="checkbox" name="hit" id="lateralDr" >
+                                                <label for="lateralDr">Dreapta</label>
+                                            </td>
+                                        
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td colspan="3">
+                                                <label for="frontal">Frontal</label><br>
+                                                <input type="checkbox" name="hit" id="frontal" >
+                                            </td>
+                                        </tr>
+                                  
+                                </table>
+
+                            </fieldset>
+                        </td>
+                    </tr>
+                    
+
+                    <tr id="rowAsigurare">
+                        <td>
+                            <fieldset>
+                                <legend>Cazuri absolute de vinov&#259;&#355;ie</legend>
+                                <ol start="2">
+                                    <li>Sunt indiscutabil re&#355;inu&#355;i &#351;oferii care:
+                                        <ul>
+                                            <li>Au consumat alcool.</li>
+                                            <li>Au consumat substan&#355;e.</li>
+                                            <li>Posed&#259; asupra lor substan&#355;e.</li>
+                                        </ul>
+                                    </li>
+                                    <!-- Punctul e pus primul, idk de ce doar punctul -->
+                                    <li><span dir="rtl" >Sunt re&#355;inu&#355;i &#351;oferii care nu posed&#259; ITP valid.</span></li>
+                                    <li>Sunt sanc&#355;iona&#355;i conduc&#259;torii care nu posed&#259; acte. </li>
+                                    <li>Sunt sanc&#355;iona&#355;i conduc&#259;torii care nu posed&#259; placu&#355;e de &#238;nmatriculare. </li>
+                                </ol>
+                            </fieldset>
+                        </td>
+
+                    <tr>
+                        <td>
+                            <label for="obs"> Observatii</label>
+                            <br>
+                            <textarea name="observatiii" id="obs" cols="85" rows="10"></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>    
+            </form>
+            
+            <p>
+                <b> &#169; </b> <a href="https://www.e-drpciv.ro/curs_legislatie.pdf" target="_blank" > <strong >Legislatie</strong></a>
+            </p>
+
+            <div>
+                <label for="joke">JOKE OF THE DAY</label> 
+                <br>
+                <textarea  name="joke" id="joke" cols="55" rows="5" readonly disabled>What do you do when you finishe a magazine at a hospital?
+                Reload and start again.
+                </textarea>
+                <br>
+                    <a href="http://validator.w3.org/check?uri=referer"><img
+                    src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
+            </div>
+
+    </body>
+
+</html>

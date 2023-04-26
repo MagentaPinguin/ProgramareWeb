@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example Select Lists with Move</title>
+
+    <script>
+        function move(source, destination) {
+          var selectedOption = source.options[source.selectedIndex];
+          if (selectedOption) {
+            destination.appendChild(selectedOption);
+          }
+        }
+      </script>
+  </head>
+  <body>
+    <h1>Mirobolantul exercitiul unule</h1>
+    <select id="list1" ondblclick="move(this, document.getElementById('list2'))">
+      <option> Pace</option>
+      <option> Razboi</option>
+      <option> Pacea nu e o optiune</option>
+      <option> Cartof</option>
+      <option> Alt cartof</option>
+
+      <option> kalashnikov</option>
+      <option>Una bucata Anca</option>
+      <option> Alt al 2 lea cartof, nu primul</option>
+      <option> Alt cartof roz</option>
+    </select>
+    <select id="list2" ondblclick="move(this, document.getElementById('list1'))"></select>
+
+  </body>
+</html>

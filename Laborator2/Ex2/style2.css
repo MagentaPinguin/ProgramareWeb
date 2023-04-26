@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    gap:0
+}
+
+body{
+    position: static;
+}
+
+header{
+    z-index: 1;
+    position: absolute;
+    background-color: red;
+    padding: 25px;
+    width: 100%;
+    
+}
+
+ul{
+    z-index: 1;
+    position: absolute;
+    float: left;
+    width: 10%;
+    padding:60;
+    height: auto;
+    top: 8%;
+    left: 0;
+    bottom: 0;
+    list-style: none;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+}
+li{
+    border: 1px solid;
+    width: 100%;
+    text-align: center;
+}
+
+a{
+    color: black;
+}
+
+section{
+    display: flex;
+    z-index:1;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 8%;
+    background-color: green;
+    /* Height of header and footer */
+    width:90%;
+}
+
+footer{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    background-color: pink;
+    padding: 15px    
+
+}

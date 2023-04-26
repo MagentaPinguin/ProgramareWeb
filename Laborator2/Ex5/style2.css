@@ -1,0 +1,32 @@
+.box{
+    display: grid;
+    grid-template: 'col';
+    width: fit-content;
+    border: 3px solid;
+}
+.item:hover{
+    background-color: greenyellow;
+    color: black;
+
+}
+
+
+.item{
+    background-color: hsl(0, 81%, 42%);
+    color: white;
+    transition: background-color 0.5s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:auto;
+    height: auto;
+    column-gap: 30px;
+    margin: 0;
+
+
+}
+
+.myImage{
+    width: 180px;
+    height: 200px;
+}

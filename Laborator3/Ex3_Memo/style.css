@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    background: bisque;
+}
+
+
+.board{
+    width: 640px;
+    height:  640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+}
+
+.memory-card{
+    width: calc(25%-5px);
+    height:  calc(50%-5px);
+    margin: 5px;
+    position: relative;
+    border: 2px solid blue;
+}
+
+
+.front, 
+.back{
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    border-radius: 5px;
+    position: absolute;
+    border: 2px solid fuchsia
+}
+

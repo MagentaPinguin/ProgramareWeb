@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleEx2.css">
+    <title>Document</title>
+
+    <script>
+        function validateData(dataValue,age){
+            let crtYear=new Date().getFullYear();
+            let crtMo=new Date().getMonth();
+            let crtDay=new Date().getDay();
+
+            let bornYear= dataValue.getFullYear();
+            let bornMo= dataValue.getMonth();
+            let bornDay= dataValue.getDay();
+            
+            if(crtMo<bornMo)
+                return crtYear-age-1 === bornYear
+            
+            if(crtMo===bornMo && crtDay<bornDay)
+                return crtYear-age-1 === bornYear
+
+            return crtYear-age === bornYear
+            
+
+
+        }
+        function vaiDeZileleMeleValidator(){
+            let numeInput=document.getElementById('numeComplet');
+            let numeValue=numeInput.value.trim();
+
+            let dataInput=document.getElementById('dataNasterii');
+            let dataValue=new Date(dataInput.value);
+    
+            let ageInput=document.getElementById('varsta');
+            let age=ageInput.value.trim();
+    
+            let emailInput=document.getElementById('email');
+            let emailValue=emailInput.value.trim();
+    
+
+            let erori=''; // Msj de eroare
+           
+            if(numeValue === ''){
+                erori+='Nume null or smth.\n';
+                numeInput.style.border="2px solid red";   
+            }
+
+            if( dataValue >= new Date()){
+                erori+='Data nasterii depaseste cea curenta, dubios.\n';
+                dataInput.style.border = "2px solid red";
+            }
+            if(!age || !validateData(dataValue,age)){
+                erori+='Age null/ not valid.\n';
+                ageInput.style.border = "2px solid red";
+            }
+            if(!emailValue || !emailValue.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/) ){
+                erori+='Email null/ not valid.\n';
+                emailInput.style.border = "2px solid red";
+            }
+            if(erori)
+                alert(erori);
+            else
+                alert("Datele sunt completate corect");            
+        }
+    </script>
+
+
+</head>
+<body>
+   
+    <form action="#">
+
+        <input type="text" name="numeComplet" id="numeComplet" placeholder="Nume complet">  
+        <div>
+            <label for="dataNasterii">Data nasterii:</label>
+            <input type="date" name="dataNasterii" id="dataNasterii">
+        </div>
+
+        <div>
+            <label for="varsta">Varsta:</label>
+            <input id="varsta" type="number" min="0" max="99">
+        </div>
+    
+        <input type="email" name="email" id="email" placeholder="Email">
+      
+        <input type="button" value="Trimite" onclick="vaiDeZileleMeleValidator()">
+
+    
+    </form>
+
+
+</body>
+</html>

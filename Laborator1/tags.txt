@@ -1,0 +1,53 @@
+Tags:
+a- hyperlink                                        ☑️                                   
+table ( th - header, tr - row ,td-column): Tabel    ☑️
+div- define section                                 ☑️                 
+strong: - define important txt                      ☑️    
+ul - define unordered list                          ☑️                
+ol - define odered list                             ☑️
+li - define a list item                             ☑️
+form - defines form for user input                  ☑️
+input - input control                               ☑️
+select - drop-down                                  ☑️ 
+option - option for select                          ☑️
+b - bold                                            ☑️ 
+textarea - text zone                                ☑️   
+h1 (… h6) - headings                                ☑️
+img - image                                         ☑️
+(Use alt="..." ca sa Dai un nume or so imaginii)    ☑️
+center - centred text                               ☑️
+fieldset group related fields in a set              ☑️
+legend -define legend for fielset                   ☑️
+p - paragraph                                       ☑️
+br -single line break                               ☑️
+span- Defines a section in a document               ☑️
+
+Atribute: 
+href             ☑️
+name             ☑️
+target           ☑️  
+border           ☑️
+colspan          ☑️
+align            ☑️
+valign           ☑️
+width            ☑️
+height           ☑️
+bgcolor          ☑️
+type             ☑️
+start            ☑️
+checked          ☑️   
+disabled         ☑️
+maxlength        ☑️ 
+readonly         ☑️   
+size             ☑️
+value            ☑️ 
+multiple         ☑️ 5
+selected         ☑️
+cols             ☑️
+rows             ☑️
+max              ☑️ 5
+min              ☑️ 5
+alt              ☑️
+step             ☑️ 5
+src              ☑️ 
+title            ☑️

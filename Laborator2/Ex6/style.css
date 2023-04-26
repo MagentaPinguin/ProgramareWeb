@@ -1,0 +1,21 @@
+.input-container {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 7px;
+  }
+  
+input[type="text"] {
+    width: 18px;
+    height: 18px;
+    margin: none;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    border: 1px solid black;
+
+
+}
+label[name|="input"]{
+    text-align: right;
+}

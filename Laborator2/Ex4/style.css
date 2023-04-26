@@ -1,0 +1,124 @@
+.container{
+    display: flex;
+    float: left;
+    flex-direction: row;  
+    list-style-type: none;
+    /*Posibile*/
+}
+
+.square{
+    width: 48px;
+    height: 48px; 
+
+}
+
+a{
+    height: 48px; 
+    display: block;
+}
+
+
+#fb {
+    background: url(img.png) left bottom; 
+}
+
+
+#idk1 {
+    background: url(img.png) left -50px  bottom;
+}
+
+
+#idk2 {
+    background: url(img.png) left -100px  bottom;
+}
+
+
+#google {
+    background: url(img.png) left -150px  bottom;
+}
+
+#linkdin {
+    background: url(img.png) left -200px bottom;
+}
+
+#pinter {
+    background: url(img.png) left -250px  bottom;
+}
+
+#idk3 {
+    background: url(img.png) left -300px  bottom;
+}
+
+#skipe {
+    background: url(img.png) left -350px  bottom;
+}
+
+#twitt {
+    background: url(img.png) left -400px  bottom;  
+}
+
+#viber {
+    background: url(img.png) left -450px  bottom;
+}
+
+#yt {
+    background: url(img.png) left -500px  bottom;
+}
+
+
+
+
+
+
+#fb:hover {
+    background: url(img.png) left bottom -49px; 
+}
+
+
+#idk1:hover {
+    background: url(img.png) left -50px  bottom -49px;
+}
+
+
+#idk2:hover {
+    background: url(img.png) left -100px  bottom -49px;
+}
+
+
+#google:hover {
+    background: url(img.png) left -150px  bottom-49px;
+}
+
+#linkdin:hover {
+    background: url(img.png) left -200px bottom -49px; 
+}
+
+#pinter:hover {
+    background: url(img.png) left -250px  bottom -49px;
+}
+
+#idk3:hover {
+    background: url(img.png) left -300px  bottom -49px;
+}
+
+#skipe:hover {
+    background: url(img.png) left -350px  bottom -49px;
+}
+
+#twitt:hover {
+    background: url(img.png) left -400px  bottom -49px;  
+}
+
+#viber:hover{
+    background: url(img.png) left -450px  bottom -49px;
+}
+
+#yt:hover{
+    background: url(img.png) left -500px  bottom -49px;
+}
+
+
+
+
+
+
