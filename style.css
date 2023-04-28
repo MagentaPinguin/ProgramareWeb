@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;  
+  
+    overflow: hidden;
+}
+
+.container{
+   height: 90vh;
+   width:  90vh;
+   border-radius: 2%;
+   padding: 5%;
+   background-color: aliceblue;
+   position: relative;
+}
+.picture{
+
+    height: 22vh;
+    width: 22vh;
+    border-radius: 45%;
+    margin: 15px;
+    background-color: pink;
+    position:absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    
+}

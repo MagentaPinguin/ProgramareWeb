@@ -1,0 +1,80 @@
+.cloud::before{
+    content: '';
+    top: -95%;
+    left: 10%;
+    width: 50%;
+    height: 150%;
+    border-radius: 50%;
+    background-color: inherit;
+    position: absolute;
+    
+}
+
+.cloud::after{
+ 
+    overflow: hidden;
+    content: '';
+    top: -60%;
+    left: 30%;
+    width: 50%;
+    height: 150%;
+    border-radius: 50%;
+    background-color: inherit;
+    position: absolute;
+    
+}
+
+.cloud{
+    top: 17%;
+    opacity: 70%;
+    width: 100px;
+    height: 33px;
+    border-radius: 80px;
+    background-color: white;
+    position: absolute;
+    animation: default 9s infinite linear; 
+}
+
+.cloud.two{
+    
+    top: 40%;
+    width: 124px;
+    height: 48px;
+    border-radius: 80px;
+    position: absolute;
+    animation-duration: 7s; 
+}
+
+
+.cloud.three{
+  
+    top: 60%;
+    width: 208px;
+    height: 90px;
+    border-radius: 80px;
+    position: absolute;
+    animation-duration: 9s; 
+}
+
+.cloud.four{
+  
+    top: 80%;
+    width: 350px;
+    height: 120px;
+    border-radius: 80px;
+    position: absolute;
+    animation-duration: 7s; 
+}
+
+@keyframes default {
+    from{ 
+     left: 0;
+     transform: translateX(-100%);
+    }
+    to{
+     left: 100%;
+     transform: translateX(0%);
+    }
+}
+
+
