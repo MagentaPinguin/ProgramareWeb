@@ -32,7 +32,7 @@
     border-radius: 80px;
     background-color: white;
     position: absolute;
-    animation: default 9s infinite linear; 
+    animation: slider 9s infinite linear; 
 }
 
 .cloud.two{
@@ -66,7 +66,7 @@
     animation-duration: 7s; 
 }
 
-@keyframes default {
+@keyframes slider {
     from{ 
      left: 0;
      transform: translateX(-100%);
