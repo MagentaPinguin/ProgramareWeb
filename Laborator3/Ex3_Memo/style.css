@@ -1,40 +1,75 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 body{
     height: 100vh;
     display: flex;
-    background: bisque;
+    background-color: lightblue; 
+
 }
 
-
-.board{
+.gameBoard{
     width: 640px;
-    height:  640px;
-    margin: auto;
+    height: 640px;
     display: flex;
     flex-wrap: wrap;
-    border: 2px solid black;
+    margin: auto;
+    perspective: 1000px;
+    
 }
-
-.memory-card{
-    width: calc(25%-5px);
-    height:  calc(50%-5px);
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: calc(25%-10px);
     margin: 5px;
     position: relative;
-    border: 2px solid blue;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    backface-visibility: hidden;
+    background-color: tomato;
+   
+}
+
+.card:active{
+    transform:  scale(.96);
+    transition: transform .2s;
+}
+.card.flip{
+    transform: rotateY(180deg);
+}
+
+p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blue;
+    background-color: rgb(59, 176, 20);
+}
+
+.frontFace, .backFace{
+    
+    height: 100%;
+    width: 100%;
+   
+    position: absolute;
+}
+
+img{
+    border-radius: 20%;
 }
 
 
-.front, 
-.back{
-    width: 100%;
-    height: 100%;
-    padding: 10%;
-    border-radius: 5px;
-    position: absolute;
-    border: 2px solid fuchsia
+.backFace{
+    height: 80%;
+    width: 80%;
+    border-radius: 40%;
+    transform: rotateY(180deg);
 }
 

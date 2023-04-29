@@ -28,6 +28,12 @@
 
 
         }
+        function resetInputBorders(name, date, age, email){
+            name.style.border="1px solid black";   
+            date.style.border="1px solid black";   
+            age.style.border="1px solid black";   
+            email.style.border="1px solid black";
+        }
         function vaiDeZileleMeleValidator(){
             let numeInput=document.getElementById('numeComplet');
             let numeValue=numeInput.value.trim();
@@ -49,10 +55,11 @@
                 numeInput.style.border="2px solid red";   
             }
 
-            if( dataValue >= new Date()){
-                erori+='Data nasterii depaseste cea curenta, dubios.\n';
+            if(isNaN(dataValue) || dataValue > new Date()){
+                erori+='Data nasterii invalida/ depaseste cea curenta, dubios.\n';
                 dataInput.style.border = "2px solid red";
             }
+
             if(!age || !validateData(dataValue,age)){
                 erori+='Age null/ not valid.\n';
                 ageInput.style.border = "2px solid red";
@@ -64,8 +71,13 @@
             if(erori)
                 alert(erori);
             else
-                alert("Datele sunt completate corect");            
+                alert("Datele sunt completate corect");  
+           
+            setTimeout(() => {
+                resetInputBorders(numeInput,dataInput,ageInput,emailInput);    
+            },6000);
         }
+
     </script>
 
 
