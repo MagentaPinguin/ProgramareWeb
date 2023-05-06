@@ -1,0 +1,26 @@
+
+table{
+
+    font-size: xxx-large; 
+    padding: 15px;
+    border: 3px dashed red;
+    border-collapse: collapse;
+
+}
+
+
+tbody{
+    font-size: xx-large; 
+    padding: 40px;
+    border: 3px dashed red ;
+    
+
+}
+
+tr,td,th{
+    border: inherit;
+    padding: inherit;
+}
+
+
+

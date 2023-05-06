@@ -1,0 +1,35 @@
+.tableContainer{
+    display: flex;
+}
+
+table{
+    display: flex;
+    font-size: xxx-large;
+    border-collapse: collapse;
+
+}
+
+tbody,thead{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+tr{
+    overflow: hidden;
+    border-collapse: collapse;
+    padding: inherit;
+}
+
+td{
+    padding: inherit;
+}
+
+
+th{
+    padding: inherit;
+    display: flex;
+}
+
+
+

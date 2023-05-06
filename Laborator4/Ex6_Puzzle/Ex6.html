@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script6.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Puzzle</title>
+    
+<script>
+    $(document).ready(function(){
+
+        $("button").dblclick(function(){
+          if($(this).get(0).id==="list1")
+            move($("select")[0],$("select")[1])
+          else
+            move($("select")[1],$("select")[0]);
+          
+        });
+
+  });
+</script>
+</head>
+
+
+<body>
+    <table id="puzzle" adde>
+      
+    </table>    
+    <div>
+        <input type="number" id="puzzleDimension" >
+        <input type="button" value="Start" onclick="start()">
+        
+    </div>
+</body>
+</html>

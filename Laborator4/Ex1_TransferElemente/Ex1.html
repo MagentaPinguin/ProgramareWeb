@@ -1,9 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <title>Ex1</title>
+   
 
     <script>
+      $(document).ready(function(){
+
+        $("select").dblclick(function(){
+          if($(this).get(0).id==="list1")
+            move($("select")[0],$("select")[1])
+          else
+            move($("select")[1],$("select")[0]);
+          
+        });
+
+  });
+
+
         function move(source, destination) {
           var selectedOption = source.options[source.selectedIndex];
           if (selectedOption) {
@@ -12,9 +27,11 @@
         }
       </script>
   </head>
+
+
   <body>
     <h1>Mirobolantul exercitiul unu</h1>
-    <select id="list1" size="7" ondblclick="move(this, document.getElementById('list2'))">
+    <select id="list1" size="7">
       <option> Pace</option>
       <option> Razboi</option>
       <option> Pacea nu e o optiune</option>
@@ -26,7 +43,9 @@
       <option> Alt al 2 lea cartof, nu primul</option>
       <option> Alt cartof roz</option>
     </select>
-    <select id="list2" size="7" ondblclick="move(this, document.getElementById('list1'))"></select>
+    <select id="list2" size="7">
+      <option> Pace</option>
+    </select>
 
   </body>
 </html>
