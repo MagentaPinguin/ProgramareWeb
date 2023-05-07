@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleEx2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <title>Document</title>
 
     <script>
@@ -24,51 +25,46 @@
                 return crtYear-age-1 === bornYear
 
             return crtYear-age === bornYear
+        }
+
+        
+
+        $(document).ready( function(){
+           $("input:button").click(function(){
+            let erori="";
+            let numeInput =$("#numeComplet");
+            let numeValue = $("#numeComplet").val(); // Value deoarece ii valoarea
+            //alert(numeValue);
+
+            let dataInput=$("#dataNasterii");
+            let dataValue=new Date(dataInput.val());
+            //alert(dataValue);
+
+            let ageInput=$("#varsta");
+            let ageValue=ageInput.val();
+      
+            //alert(ageValue);    
+            let emailInput=$("#email");
+            let emailValue=emailInput.val();
+            //alert(emailValue);
             
-
-
-        }
-
-        function resetInputBorders(name, date, age, email){
-            name.style.border="1px solid black";   
-            date.style.border="1px solid black";   
-            age.style.border="1px solid black";   
-            email.style.border="1px solid black";
-        }
-
-        function vaiDeZileleMeleValidator(){
-            let numeInput=document.getElementById('numeComplet');
-            let numeValue=numeInput.value.trim();
-
-            let dataInput=document.getElementById('dataNasterii');
-            let dataValue=new Date(dataInput.value);
-    
-            let ageInput=document.getElementById('varsta');
-            let age=ageInput.value.trim();
-    
-            let emailInput=document.getElementById('email');
-            let emailValue=emailInput.value.trim();
-    
-
-            let erori=''; // Msj de eroare
-           
-            if(numeValue === ''){
+            if(numeValue === ""){
                 erori+='Nume null or smth.\n';
-                numeInput.style.border="2px solid red";   
+                numeInput.css("border","2px solid red"); 
             }
 
             if(isNaN(dataValue) || dataValue > new Date()){
                 erori+='Data nasterii invalida/ depaseste cea curenta, dubios.\n';
-                dataInput.style.border = "2px solid red";
+                dataInput.css("border","2px solid red"); 
             }
-
-            if(!age || !validateData(dataValue,age)){
+        
+            if(!ageValue || !validateData(dataValue,ageValue)){
                 erori+='Age null/ not valid.\n';
-                ageInput.style.border = "2px solid red";
+                ageInput.css("border","2px solid red"); 
             }
             if(!emailValue || !emailValue.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/) ){
                 erori+='Email null/ not valid.\n';
-                emailInput.style.border = "2px solid red";
+                emailInput.css("border","2px solid red"); 
             }
             if(erori)
                 alert(erori);
@@ -76,32 +72,39 @@
                 alert("Datele sunt completate corect");  
            
             setTimeout(() => {
-                resetInputBorders(numeInput,dataInput,ageInput,emailInput);    
-            },6000);
-        }
+                numeInput.css("border","1px solid black");   
+                dataInput.css("border","1px solid black");   
+                ageInput.css("border","1px solid black");  
+                emailInput.css("border","1px solid black");  
+            },4000);
+
+
+            })
+        });
+
 
     </script>
-
 
 </head>
 <body>
    
     <form action="#">
 
-        <input type="text" name="numeComplet" id="numeComplet" placeholder="Nume complet">  
+        <input type="text" id="numeComplet" placeholder="Nume complet">  
         
         <div>
             <label for="dataNasterii">Data nasterii:</label>
-            <input type="date" name="dataNasterii" id="dataNasterii">
+            <input type="date" id="dataNasterii">
         </div>
 
         <div>
             <label for="varsta">Varsta:</label>
-            <input id="varsta" type="number" min="0" max="99">
+            <input type="number" id="varsta" min="0" max="99">
         </div>
 
-        <input type="email" name="email" id="email" placeholder="Email">
-        <input type="button" class="n " value="Trimite" onclick="vaiDeZileleMeleValidator()">
+        <input type="email" id="email" placeholder="Email">
+        
+        <input type="button" value="Trimite">
     </form>
 
 
